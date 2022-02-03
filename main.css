@@ -36,3 +36,37 @@ header h1 {
   color: var(--grey);
   margin-bottom: 1rem;
 }
+
+#new-task-form {
+  display: flex;
+}
+
+input, button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+#task-input {
+  flex: 1 1 0%;
+  background-color: var(--darker);
+  color: var(--light);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+}
+
+#task-input::placeholder {
+  color: var(--light);
+}
+
+#submit-task {
+  color:var(--pink);
+  font-size: 1.25rem;
+  font-weight: 600;
+  background-image: repeating-linear-gradient(to right, var(--pink), var(--purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
