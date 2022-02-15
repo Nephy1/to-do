@@ -3,6 +3,7 @@ window.addEventListener('load', () => {
   const input = document.querySelector('#new-task-input');
   const list_el = document.querySelector('#tasks');
 
+
   form.addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -48,6 +49,11 @@ window.addEventListener('load', () => {
     list_el.appendChild(task_el);
 
     input.value = "";
+
+    // ***** //
+    // EDIT //
+    // ***** //
+
     task_edit_el.addEventListener('click', () => {
       if (task_edit_el.innerText.toLocaleLowerCase() == 'edit') {
         task_input_el.removeAttribute('readonly');
@@ -57,6 +63,15 @@ window.addEventListener('load', () => {
         task_input_el.setAttribute('readonly', 'readonly');
         task_edit_el.innerText = 'Edit';
       }
-    })
+    });
+
+
+    // ****** //
+    // DELETE //
+    // ****** //
+    task_delete_el.addEventListener('click', () => {
+      list_el.removeChild(task_el);
+    });
+
   })
 })
