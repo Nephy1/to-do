@@ -48,7 +48,7 @@ input, button {
   background: none;
 }
 
-#task-input {
+#new-task-input {
   flex: 1 1 0%;
   background-color: var(--darker);
   color: var(--light);
@@ -58,15 +58,52 @@ input, button {
   font-size: 1.25rem;
 }
 
-#task-input::placeholder {
+#new-task-input::placeholder {
   color: var(--light);
 }
 
-#submit-task {
+#new-task-submit {
   color:var(--pink);
   font-size: 1.25rem;
   font-weight: 600;
   background-image: repeating-linear-gradient(to right, var(--pink), var(--purple));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+#new-task-submit:hover {
+  opacity: 0.8;
+}
+#new-task-submit:active {
+opacity: 0.6;
+}
+main {
+  flex: 1 1 0%;
+  padding: 2rem 1rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.task-list {
+padding: 1rem;
+}
+
+.task-list h2 {
+font-size: 1.5rem;
+font-weight: 300;
+color: var(--grey);
+margin-bottom: 1rem;
+}
+
+#tasks .task {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--darkest);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+#tasks .task .content .text {
+  color: var(--light);
 }
